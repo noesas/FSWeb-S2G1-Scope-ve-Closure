@@ -20,6 +20,7 @@ function ilkiniDon(stringArray, callback) {
 }
 console.log('örnek görev:', ilkiniDon(['as','sa'],function(metin){return metin+metin}));
 
+
 // Başlangıç Challenge'ı Sonu
 
 
@@ -30,14 +31,22 @@ console.log('örnek görev:', ilkiniDon(['as','sa'],function(metin){return metin
   Aşağıdaki skor1 ve skor2 kodlarını inceleyiniz ve aşağıdaki soruları altına not alarak cevaplayın
   
   1. skor1 ve skor2 arasındaki fark nedir?
-  
+ 
+  const skor1 = skorArtirici() satırı, skorArtirici fonksiyonunu çağırarak bir closure oluşturur ve bu closure'ın referansını skor1 değişkenine atar. Bu skor1 değişkeni artık skorGuncelle fonksiyonunu temsil eder ve bu fonksiyonu çağırdığımızda skor değişkeninin değerini arttırabiliriz.
+   
   2. Hangisi bir closure kullanmaktadır? Nasıl tarif edebilirsin? (yarınki derste öğreneceksin :) )
-  
+  skor 1 de closure kullanılmaktadır.const skor1 = skorArtirici() satırı, skorArtirici fonksiyonunu çağırarak bir closure oluşturur ve bu closure'ın referansını skor1 değişkenine atar. Bu skor1 değişkeni artık skorGuncelle fonksiyonunu temsil eder ve bu fonksiyonu çağırdığımızda skor değişkeninin değerini arttırabiliriz.
+   
   3. Hangi durumda skor1 tercih edilebilir? Hangi durumda skor2 daha mantıklıdır?
+  skor1, closure kullanılarak oluşturulan bir fonksiyon referansını içerir. Bu referans, farklı yerlerde kullanılabilen aynı fonksiyonu temsil eder. Örneğin, aynı skor sistemi birden fazla yerde kullanılacaksa veya farklı zamanlarda kullanılacaksa, skor1 kullanmak daha mantıklı olabilir. Ayrıca, skor1 ile birlikte tutulan skor değişkeni, sadece skor1 fonksiyonu tarafından erişilebilir olduğu için, diğer değişkenlerin skor değişkenine erişimi engellenir. Bu nedenle, skor sistemi özelliği gibi sadece belirli bir kapsama alanında kullanılmak istendiğinde skor1 tercih edilebilir.
+
+ Öte yandan, skor2 örneği sadece skor değişkenine erişir ve sadece bir fonksiyondan oluşur. Bu nedenle, skor2 kullanmak, sadece bir fonksiyon içinde ihtiyaç duyulan skor takibi gibi basit durumlar için uygun olabilir. Özellikle, skor değişkenine başka bir yerden erişim olmayacaksa veya skor takibi gibi özellikler çok kapsamlı olmayacaksa, skor2 kullanmak daha mantıklı olabilir.
+
 */
 
+
 // skor1 kodları
-function skorArtirici() {
+ function skorArtirici() {
   let skor = 0;
   return function skorGuncelle() {
    return skor++;
@@ -64,8 +73,11 @@ Aşağıdaki takimSkoru() fonksiyonununda aşağıdakileri yapınız:
 Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyonu olarak da kullanılacak
 */
 
-function takimSkoru(/*Kodunuzu buraya yazınız*/){
-    /*Kodunuzu buraya yazınız*/
+function takimSkoru(){
+const minSayi = 10;
+const maxSayi = 25;
+const skor = Math.floor(Math.random() * (maxSkor - minSkor + 1)) + minSkor;
+return skor;
 }
 
 
@@ -86,11 +98,18 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */ 
 
-function macSonucu(/*Kodunuzu buraya yazınız*/){
-  /*Kodunuzu buraya yazınız*/
+function Takım skoru (callback, çeyrek sayısı){
+
+let evSahibiskoru = 0
+let konukTakimSkoru = 0
+
+for (let i = 0; i < çeyrek sayısı; i++){
+
+
+return {"EvSahibi": EvsahibiSkoru, "KonukTakimSkoru": KonukTakimSkoru}
 }
 
-
+}
 
 
 
